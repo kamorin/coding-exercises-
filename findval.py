@@ -8,13 +8,13 @@ class TestStringMethods(unittest.TestCase):
         self.assertEquals(findval([6,6,6,6,6,6,6,6,6,6,6],6),11)
 
     def test_rightduplicates(self):
-        self.assertTrue(findval([1,3,4,5,9,9,9,9,9,9,9,9,9],9),9)
+        self.assertEquals(findval([1,3,4,5,9,9,9,9,9,9,9,9,9],9),9)
 
     def test_leftduplicates(self):
-        self.assertTrue(findval([3,3,3,3,3,3,3,3,8,11],3),8)
+        self.assertEquals(findval([3,3,3,3,3,3,3,3,8,11],3),8)
 
     def test_noduplicates(self):
-        self.assertTrue(findval([1,3,4,5,6,7,8,11,15,54,88],7),1)
+        self.assertEquals(findval([1,3,4,5,6,7,8,11,15,54,88],7),1)
 
 
 def findval(sortedlist, num):
